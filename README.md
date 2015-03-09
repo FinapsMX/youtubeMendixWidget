@@ -1,10 +1,13 @@
 YouTube Mendix Widget
 =========
 
-Add youtube videos from a entity...
+This widget allows youtube links stored in a String attribute of an entity, be displayed 
+as an embedded YouTube player.  
 
+Key features:
   - Easily add list of videos to your pages
   - Simple to use
+  - Takes data from context
 
 
 Version
@@ -12,6 +15,11 @@ Version
 
 1.0
 
+Author
+----
+Simon Martyr 
+simon.martyr@finaps.nl 
+March 2015. 
 
 
 Usage
@@ -35,10 +43,13 @@ the usual format for the url is:
 
 ```
 
-Example URL
+Example URL & Use case
 ----------------
 ![Share URL](http://i.imgur.com/iuTZZow.png)
 Use the URL from the  'Embed' tab as your video URL.
+
+![Example use](http://www.pfvdw.com/sites/default/files/blog-images/tut1_figure_0.png)
+Example use case. 
 
 License
 ----
