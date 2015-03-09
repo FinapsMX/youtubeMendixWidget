@@ -46,9 +46,13 @@ the usual format for the url is:
 Example URL & Use case
 ----------------
 ![Share URL](http://i.imgur.com/iuTZZow.png)
+
+
 Use the URL from the  'Embed' tab as your video URL.
 
 ![Example use](http://www.pfvdw.com/sites/default/files/blog-images/tut1_figure_0.png)
+
+
 Example use case. 
 
 License
