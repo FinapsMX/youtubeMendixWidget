@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<widget id="youtube.widget.youtube" needsEntityContext="true" xmlns="http://www.mendix.com/widget/1.0/">
+    <name>youtube</name>
+    <description>The description of this widget.</description>
+
+    <icon />
+
+    <properties>
+        <property key="value" required="true" type="attribute">
+            <caption>Value</caption>
+            <category>Data source</category>
+            <description>The value which should be displayed.</description>
+            <attributeTypes>
+                <attributeType name="String" />
+                <attributeType name="Integer" />
+                <attributeType name="Long" />
+            </attributeTypes>
+        </property>
+    </properties>
+</widget>
+

@@ -1,0 +1,9 @@
+Buildfile: \\Mac\Home\Documents\Github\youtube\youtube\test\deployment\build_webui.xml
+
+deploy:
+    [unzip] Expanding: \\Mac\Home\Documents\Github\youtube\youtube\test\widgets\youtube.mpk into \\Mac\Home\Documents\Github\youtube\youtube\test\deployment\web\widgets
+
+BUILD SUCCESSFUL
+Total time: 0 seconds
+
+

@@ -1,0 +1,9 @@
+Buildfile: \\Mac\Home\Documents\Github\youtube\youtube\test\deployment\build_core.xml
+
+deploy:
+    [unzip] Expanding: C:\Program Files (x86)\Mendix\5.14.1\modeler\deployment.mxz into \\Mac\Home\Documents\Github\youtube\youtube\test\deployment
+
+BUILD SUCCESSFUL
+Total time: 1 second
+
+
