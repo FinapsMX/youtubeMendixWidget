@@ -1,10 +1,8 @@
-Buildfile: \\Mac\Home\Documents\Github\youtube\youtube\test\deployment\build_core.xml
+Buildfile: \\Mac\Home\Documents\3. Github\youtubeMendixWidget\test\deployment\build_core.xml
 
 compile:
-    [javac] Compiling 24 source files to \\Mac\Home\Documents\Github\youtube\youtube\test\deployment\run\bin
-    [javac] Note: \\Mac\Home\Documents\Github\youtube\youtube\test\javasource\com\mendix\core\Core.java uses or overrides a deprecated API.
-    [javac] Note: Recompile with -Xlint:deprecation for details.
-    [javac] Note: \\Mac\Home\Documents\Github\youtube\youtube\test\javasource\com\mendix\core\Core.java uses unchecked or unsafe operations.
+    [javac] Compiling 24 source files to \\Mac\Home\Documents\3. Github\youtubeMendixWidget\test\deployment\run\bin
+    [javac] Note: \\Mac\Home\Documents\3. Github\youtubeMendixWidget\test\javasource\com\mendix\core\Core.java uses unchecked or unsafe operations.
     [javac] Note: Recompile with -Xlint:unchecked for details.
 
 build:
@@ -13,10 +11,11 @@ build:
       [bnd]  Split package, multiple jars provide the same package:com/mendix/core
       [bnd] Use Import/Export Package directive -split-package:=(merge-first|merge-last|error|first) to get rid of this warning
       [bnd] Package found in   [Jar:mxruntime, Jar:run]
-      [bnd] Class path         [Jar:biz.aQute.bnd.annotation, Jar:org.scala-lang.scala-library, Jar:json, Jar:logging, Jar:m2ee-api, Jar:mxruntime, Jar:integration, Jar:osgi.cmpn, Jar:webui, Jar:javax.servlet, Jar:run]
+      [bnd] Class path         [Jar:biz.aQute.bnd.annotation, Jar:org.scala-lang.scala-library, Jar:datastorage-api, Jar:json, Jar:logging, Jar:m2ee-api, Jar:mxruntime, Jar:integration, Jar:osgi.cmpn, Jar:webui, Jar:javax.servlet, Jar:run]
       [bnd] # project (project.jar) 44 
 
 BUILD SUCCESSFUL
-Total time: 8 seconds
+Total time: 6 seconds
+
 
 

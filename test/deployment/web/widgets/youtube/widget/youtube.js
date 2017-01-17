@@ -30,10 +30,11 @@ define([
     "dojo/_base/lang",
     "dojo/text",
     "dojo/html",
+    "dojo/dom-attr",
     "dojo/_base/event",
     "youtube/lib/jquery-1.11.2",
     "dojo/text!youtube/widget/template/youtube.html"
-], function (declare, _WidgetBase, _TemplatedMixin, dom, dojoDom, dojoProp, dojoGeometry, dojoClass, dojoStyle, dojoConstruct, dojoArray, dojoLang, dojoText, dojoHtml, dojoEvent, _jQuery, widgetTemplate) {
+], function (declare, _WidgetBase, _TemplatedMixin, dom, dojoDom, dojoProp, dojoGeometry, dojoClass, dojoStyle, dojoConstruct, dojoArray, dojoLang, dojoText, dojoHtml, dojoAttr, dojoEvent, _jQuery, widgetTemplate) {
     "use strict";
 
     var $ = _jQuery.noConflict(true);
@@ -42,6 +43,7 @@ define([
     return declare("youtube.widget.youtube", [_WidgetBase, _TemplatedMixin], {
         // _TemplatedMixin will create our dom node using this HTML template.
         templateString: widgetTemplate,
+        youtubeplayer: null, 
 
         // Parameters configured in the Modeler.
         value: "", 
@@ -73,9 +75,7 @@ define([
         _makePlayer: function(url){
             console.log("making player"); 
             
-            var videoPlayer = dojo.cache('youtube.widget.template', 'youtube.html');
-            videoPlayer = videoPlayer.split("{{url}}").join(url); 
-            this.domNode.innerHTML = videoPlayer;   
+            dojoAttr.set(this.youtubeplayer, "src", url);  
             
         },
 

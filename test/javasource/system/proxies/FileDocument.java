@@ -4,26 +4,19 @@
 
 package system.proxies;
 
-import com.mendix.core.Core;
-import com.mendix.core.CoreException;
-import com.mendix.systemwideinterfaces.core.IContext;
-import com.mendix.systemwideinterfaces.core.IMendixIdentifier;
-import com.mendix.systemwideinterfaces.core.IMendixObject;
-import com.mendix.core.objectmanagement.member.MendixBinary;
-
 /**
  * 
  */
 public class FileDocument
 {
-	private final IMendixObject fileDocumentMendixObject;
+	private final com.mendix.systemwideinterfaces.core.IMendixObject fileDocumentMendixObject;
 
-	private final IContext context;
+	private final com.mendix.systemwideinterfaces.core.IContext context;
 
 	/**
 	 * Internal name of this entity
 	 */
-	public static final String entityName = "System.FileDocument";
+	public static final java.lang.String entityName = "System.FileDocument";
 
 	/**
 	 * Enum describing members of this entity
@@ -36,31 +29,31 @@ public class FileDocument
 		Contents("Contents"),
 		HasContents("HasContents");
 
-		private String metaName;
+		private java.lang.String metaName;
 
-		MemberNames(String s)
+		MemberNames(java.lang.String s)
 		{
 			metaName = s;
 		}
 
 		@Override
-		public String toString()
+		public java.lang.String toString()
 		{
 			return metaName;
 		}
 	}
 
-	public FileDocument(IContext context)
+	public FileDocument(com.mendix.systemwideinterfaces.core.IContext context)
 	{
-		this(context, Core.instantiate(context, "System.FileDocument"));
+		this(context, com.mendix.core.Core.instantiate(context, "System.FileDocument"));
 	}
 
-	protected FileDocument(IContext context, IMendixObject fileDocumentMendixObject)
+	protected FileDocument(com.mendix.systemwideinterfaces.core.IContext context, com.mendix.systemwideinterfaces.core.IMendixObject fileDocumentMendixObject)
 	{
 		if (fileDocumentMendixObject == null)
-			throw new IllegalArgumentException("The given object cannot be null.");
-		if (!Core.isSubClassOf("System.FileDocument", fileDocumentMendixObject.getType()))
-			throw new IllegalArgumentException("The given object is not a System.FileDocument");
+			throw new java.lang.IllegalArgumentException("The given object cannot be null.");
+		if (!com.mendix.core.Core.isSubClassOf("System.FileDocument", fileDocumentMendixObject.getType()))
+			throw new java.lang.IllegalArgumentException("The given object is not a System.FileDocument");
 
 		this.fileDocumentMendixObject = fileDocumentMendixObject;
 		this.context = context;
@@ -70,7 +63,7 @@ public class FileDocument
 	 * @deprecated Use 'FileDocument.load(IContext, IMendixIdentifier)' instead.
 	 */
 	@Deprecated
-	public static system.proxies.FileDocument initialize(IContext context, IMendixIdentifier mendixIdentifier) throws CoreException
+	public static system.proxies.FileDocument initialize(com.mendix.systemwideinterfaces.core.IContext context, com.mendix.systemwideinterfaces.core.IMendixIdentifier mendixIdentifier) throws com.mendix.core.CoreException
 	{
 		return system.proxies.FileDocument.load(context, mendixIdentifier);
 	}
@@ -79,24 +72,24 @@ public class FileDocument
 	 * Initialize a proxy using context (recommended). This context will be used for security checking when the get- and set-methods without context parameters are called.
 	 * The get- and set-methods with context parameter should be used when for instance sudo access is necessary (IContext.getSudoContext() can be used to obtain sudo access).
 	 */
-	public static system.proxies.FileDocument initialize(IContext context, IMendixObject mendixObject)
+	public static system.proxies.FileDocument initialize(com.mendix.systemwideinterfaces.core.IContext context, com.mendix.systemwideinterfaces.core.IMendixObject mendixObject)
 	{
-		if (Core.isSubClassOf("System.Image", mendixObject.getType()))
+		if (com.mendix.core.Core.isSubClassOf("System.Image", mendixObject.getType()))
 			return system.proxies.Image.initialize(context, mendixObject);
 
 		return new system.proxies.FileDocument(context, mendixObject);
 	}
 
-	public static system.proxies.FileDocument load(IContext context, IMendixIdentifier mendixIdentifier) throws CoreException
+	public static system.proxies.FileDocument load(com.mendix.systemwideinterfaces.core.IContext context, com.mendix.systemwideinterfaces.core.IMendixIdentifier mendixIdentifier) throws com.mendix.core.CoreException
 	{
-		IMendixObject mendixObject = Core.retrieveId(context, mendixIdentifier);
+		com.mendix.systemwideinterfaces.core.IMendixObject mendixObject = com.mendix.core.Core.retrieveId(context, mendixIdentifier);
 		return system.proxies.FileDocument.initialize(context, mendixObject);
 	}
 
-	public static java.util.List<? extends system.proxies.FileDocument> load(IContext context, String xpathConstraint) throws CoreException
+	public static java.util.List<? extends system.proxies.FileDocument> load(com.mendix.systemwideinterfaces.core.IContext context, java.lang.String xpathConstraint) throws com.mendix.core.CoreException
 	{
 		java.util.List<system.proxies.FileDocument> result = new java.util.ArrayList<system.proxies.FileDocument>();
-		for (IMendixObject obj : Core.retrieveXPathQuery(context, "//System.FileDocument" + xpathConstraint))
+		for (com.mendix.systemwideinterfaces.core.IMendixObject obj : com.mendix.core.Core.retrieveXPathQuery(context, "//System.FileDocument" + xpathConstraint))
 			result.add(system.proxies.FileDocument.initialize(context, obj));
 		return result;
 	}
@@ -104,17 +97,17 @@ public class FileDocument
 	/**
 	 * Commit the changes made on this proxy object.
 	 */
-	public final void commit() throws CoreException
+	public final void commit() throws com.mendix.core.CoreException
 	{
-		Core.commit(context, getMendixObject());
+		com.mendix.core.Core.commit(context, getMendixObject());
 	}
 
 	/**
 	 * Commit the changes made on this proxy object using the specified context.
 	 */
-	public final void commit(IContext context) throws CoreException
+	public final void commit(com.mendix.systemwideinterfaces.core.IContext context) throws com.mendix.core.CoreException
 	{
-		Core.commit(context, getMendixObject());
+		com.mendix.core.Core.commit(context, getMendixObject());
 	}
 
 	/**
@@ -122,15 +115,15 @@ public class FileDocument
 	 */
 	public final void delete()
 	{
-		Core.delete(context, getMendixObject());
+		com.mendix.core.Core.delete(context, getMendixObject());
 	}
 
 	/**
 	 * Delete the object using the specified context.
 	 */
-	public final void delete(IContext context)
+	public final void delete(com.mendix.systemwideinterfaces.core.IContext context)
 	{
-		Core.delete(context, getMendixObject());
+		com.mendix.core.Core.delete(context, getMendixObject());
 	}
 	/**
 	 * @return value of FileID
@@ -144,7 +137,7 @@ public class FileDocument
 	 * @param context
 	 * @return value of FileID
 	 */
-	public final Long getFileID(IContext context)
+	public final Long getFileID(com.mendix.systemwideinterfaces.core.IContext context)
 	{
 		return (Long) getMendixObject().getValue(context, MemberNames.FileID.toString());
 	}
@@ -163,7 +156,7 @@ public class FileDocument
 	 * @param context
 	 * @param fileid
 	 */
-	public final void setFileID(IContext context, Long fileid)
+	public final void setFileID(com.mendix.systemwideinterfaces.core.IContext context, Long fileid)
 	{
 		getMendixObject().setValue(context, MemberNames.FileID.toString(), fileid);
 	}
@@ -180,7 +173,7 @@ public class FileDocument
 	 * @param context
 	 * @return value of Name
 	 */
-	public final String getName(IContext context)
+	public final String getName(com.mendix.systemwideinterfaces.core.IContext context)
 	{
 		return (String) getMendixObject().getValue(context, MemberNames.Name.toString());
 	}
@@ -199,7 +192,7 @@ public class FileDocument
 	 * @param context
 	 * @param name
 	 */
-	public final void setName(IContext context, String name)
+	public final void setName(com.mendix.systemwideinterfaces.core.IContext context, String name)
 	{
 		getMendixObject().setValue(context, MemberNames.Name.toString(), name);
 	}
@@ -216,7 +209,7 @@ public class FileDocument
 	 * @param context
 	 * @return value of DeleteAfterDownload
 	 */
-	public final Boolean getDeleteAfterDownload(IContext context)
+	public final Boolean getDeleteAfterDownload(com.mendix.systemwideinterfaces.core.IContext context)
 	{
 		return (Boolean) getMendixObject().getValue(context, MemberNames.DeleteAfterDownload.toString());
 	}
@@ -235,7 +228,7 @@ public class FileDocument
 	 * @param context
 	 * @param deleteafterdownload
 	 */
-	public final void setDeleteAfterDownload(IContext context, Boolean deleteafterdownload)
+	public final void setDeleteAfterDownload(com.mendix.systemwideinterfaces.core.IContext context, Boolean deleteafterdownload)
 	{
 		getMendixObject().setValue(context, MemberNames.DeleteAfterDownload.toString(), deleteafterdownload);
 	}
@@ -247,9 +240,9 @@ public class FileDocument
 	  * @param context
 	  * @param outputStream
 	  */
-	public final void getContents(IContext context, java.io.OutputStream outputStream)
+	public final void getContents(com.mendix.systemwideinterfaces.core.IContext context, java.io.OutputStream outputStream)
 	{
-		MendixBinary binary = (MendixBinary) getMendixObject().getMember(context, MemberNames.Contents.toString());
+		com.mendix.core.objectmanagement.member.MendixBinary binary = (com.mendix.core.objectmanagement.member.MendixBinary) getMendixObject().getMember(context, MemberNames.Contents.toString());
 		binary.retrieveValue(context, outputStream);
 	}
 
@@ -263,11 +256,11 @@ public class FileDocument
 	  * @param inputStream
 	  * @param length the number of bytes in the stream
 	  */
-	public final void setContents(IContext context, java.io.InputStream inputStream, long length)
+	public final void setContents(com.mendix.systemwideinterfaces.core.IContext context, java.io.InputStream inputStream, long length)
 	{
-		if (getMendixObject().getState() == IMendixObject.ObjectState.INSTANTIATED)
-			try { commit(); } catch (CoreException ex) { }
-		MendixBinary binary = (MendixBinary) getMendixObject().getMember(context, MemberNames.Contents.toString());
+		if (getMendixObject().getState() == com.mendix.systemwideinterfaces.core.IMendixObject.ObjectState.INSTANTIATED)
+			try { commit(); } catch (com.mendix.core.CoreException ex) { }
+		com.mendix.core.objectmanagement.member.MendixBinary binary = (com.mendix.core.objectmanagement.member.MendixBinary) getMendixObject().getMember(context, MemberNames.Contents.toString());
 		binary.storeValue(context, inputStream, length);
 	}
 
@@ -283,7 +276,7 @@ public class FileDocument
 	 * @param context
 	 * @return value of HasContents
 	 */
-	public final Boolean getHasContents(IContext context)
+	public final Boolean getHasContents(com.mendix.systemwideinterfaces.core.IContext context)
 	{
 		return (Boolean) getMendixObject().getValue(context, MemberNames.HasContents.toString());
 	}
@@ -302,7 +295,7 @@ public class FileDocument
 	 * @param context
 	 * @param hascontents
 	 */
-	public final void setHasContents(IContext context, Boolean hascontents)
+	public final void setHasContents(com.mendix.systemwideinterfaces.core.IContext context, Boolean hascontents)
 	{
 		getMendixObject().setValue(context, MemberNames.HasContents.toString(), hascontents);
 	}
@@ -310,7 +303,7 @@ public class FileDocument
 	/**
 	 * @return the IMendixObject instance of this proxy for use in the Core interface.
 	 */
-	public final IMendixObject getMendixObject()
+	public final com.mendix.systemwideinterfaces.core.IMendixObject getMendixObject()
 	{
 		return fileDocumentMendixObject;
 	}
@@ -318,7 +311,7 @@ public class FileDocument
 	/**
 	 * @return the IContext instance of this proxy, or null if no IContext instance was specified at initialization.
 	 */
-	public final IContext getContext()
+	public final com.mendix.systemwideinterfaces.core.IContext getContext()
 	{
 		return context;
 	}
@@ -346,7 +339,7 @@ public class FileDocument
 	/**
 	 * @return String name of this class
 	 */
-	public static String getType()
+	public static java.lang.String getType()
 	{
 		return "System.FileDocument";
 	}
@@ -356,7 +349,7 @@ public class FileDocument
 	 * @deprecated Use getMendixObject().getId().toLong() to get a unique identifier for this object.
 	 */
 	@Deprecated
-	public String getGUID()
+	public java.lang.String getGUID()
 	{
 		return "ID_" + getMendixObject().getId().toLong();
 	}

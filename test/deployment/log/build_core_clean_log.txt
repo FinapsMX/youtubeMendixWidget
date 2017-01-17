@@ -1,8 +1,11 @@
-Buildfile: \\Mac\Home\Documents\Github\youtube\youtube\test\deployment\build_core.xml
+Buildfile: \\Mac\Home\Documents\3. Github\youtubeMendixWidget\test\deployment\build_core.xml
 
 clean:
+   [delete] Deleting directory \\Mac\Home\Documents\3. Github\youtubeMendixWidget\test\deployment\model
+   [delete] Deleting directory \\Mac\Home\Documents\3. Github\youtubeMendixWidget\test\deployment\run
 
 BUILD SUCCESSFUL
-Total time: 0 seconds
+Total time: 2 seconds
+
 
 

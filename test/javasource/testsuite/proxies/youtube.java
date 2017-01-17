@@ -4,25 +4,19 @@
 
 package testsuite.proxies;
 
-import com.mendix.core.Core;
-import com.mendix.core.CoreException;
-import com.mendix.systemwideinterfaces.core.IContext;
-import com.mendix.systemwideinterfaces.core.IMendixIdentifier;
-import com.mendix.systemwideinterfaces.core.IMendixObject;
-
 /**
  * 
  */
 public class youtube
 {
-	private final IMendixObject youtubeMendixObject;
+	private final com.mendix.systemwideinterfaces.core.IMendixObject youtubeMendixObject;
 
-	private final IContext context;
+	private final com.mendix.systemwideinterfaces.core.IContext context;
 
 	/**
 	 * Internal name of this entity
 	 */
-	public static final String entityName = "TestSuite.youtube";
+	public static final java.lang.String entityName = "TestSuite.youtube";
 
 	/**
 	 * Enum describing members of this entity
@@ -31,31 +25,31 @@ public class youtube
 	{
 		url("url");
 
-		private String metaName;
+		private java.lang.String metaName;
 
-		MemberNames(String s)
+		MemberNames(java.lang.String s)
 		{
 			metaName = s;
 		}
 
 		@Override
-		public String toString()
+		public java.lang.String toString()
 		{
 			return metaName;
 		}
 	}
 
-	public youtube(IContext context)
+	public youtube(com.mendix.systemwideinterfaces.core.IContext context)
 	{
-		this(context, Core.instantiate(context, "TestSuite.youtube"));
+		this(context, com.mendix.core.Core.instantiate(context, "TestSuite.youtube"));
 	}
 
-	protected youtube(IContext context, IMendixObject youtubeMendixObject)
+	protected youtube(com.mendix.systemwideinterfaces.core.IContext context, com.mendix.systemwideinterfaces.core.IMendixObject youtubeMendixObject)
 	{
 		if (youtubeMendixObject == null)
-			throw new IllegalArgumentException("The given object cannot be null.");
-		if (!Core.isSubClassOf("TestSuite.youtube", youtubeMendixObject.getType()))
-			throw new IllegalArgumentException("The given object is not a TestSuite.youtube");
+			throw new java.lang.IllegalArgumentException("The given object cannot be null.");
+		if (!com.mendix.core.Core.isSubClassOf("TestSuite.youtube", youtubeMendixObject.getType()))
+			throw new java.lang.IllegalArgumentException("The given object is not a TestSuite.youtube");
 
 		this.youtubeMendixObject = youtubeMendixObject;
 		this.context = context;
@@ -65,7 +59,7 @@ public class youtube
 	 * @deprecated Use 'youtube.load(IContext, IMendixIdentifier)' instead.
 	 */
 	@Deprecated
-	public static testsuite.proxies.youtube initialize(IContext context, IMendixIdentifier mendixIdentifier) throws CoreException
+	public static testsuite.proxies.youtube initialize(com.mendix.systemwideinterfaces.core.IContext context, com.mendix.systemwideinterfaces.core.IMendixIdentifier mendixIdentifier) throws com.mendix.core.CoreException
 	{
 		return testsuite.proxies.youtube.load(context, mendixIdentifier);
 	}
@@ -74,21 +68,21 @@ public class youtube
 	 * Initialize a proxy using context (recommended). This context will be used for security checking when the get- and set-methods without context parameters are called.
 	 * The get- and set-methods with context parameter should be used when for instance sudo access is necessary (IContext.getSudoContext() can be used to obtain sudo access).
 	 */
-	public static testsuite.proxies.youtube initialize(IContext context, IMendixObject mendixObject)
+	public static testsuite.proxies.youtube initialize(com.mendix.systemwideinterfaces.core.IContext context, com.mendix.systemwideinterfaces.core.IMendixObject mendixObject)
 	{
 		return new testsuite.proxies.youtube(context, mendixObject);
 	}
 
-	public static testsuite.proxies.youtube load(IContext context, IMendixIdentifier mendixIdentifier) throws CoreException
+	public static testsuite.proxies.youtube load(com.mendix.systemwideinterfaces.core.IContext context, com.mendix.systemwideinterfaces.core.IMendixIdentifier mendixIdentifier) throws com.mendix.core.CoreException
 	{
-		IMendixObject mendixObject = Core.retrieveId(context, mendixIdentifier);
+		com.mendix.systemwideinterfaces.core.IMendixObject mendixObject = com.mendix.core.Core.retrieveId(context, mendixIdentifier);
 		return testsuite.proxies.youtube.initialize(context, mendixObject);
 	}
 
-	public static java.util.List<testsuite.proxies.youtube> load(IContext context, String xpathConstraint) throws CoreException
+	public static java.util.List<testsuite.proxies.youtube> load(com.mendix.systemwideinterfaces.core.IContext context, java.lang.String xpathConstraint) throws com.mendix.core.CoreException
 	{
 		java.util.List<testsuite.proxies.youtube> result = new java.util.ArrayList<testsuite.proxies.youtube>();
-		for (IMendixObject obj : Core.retrieveXPathQuery(context, "//TestSuite.youtube" + xpathConstraint))
+		for (com.mendix.systemwideinterfaces.core.IMendixObject obj : com.mendix.core.Core.retrieveXPathQuery(context, "//TestSuite.youtube" + xpathConstraint))
 			result.add(testsuite.proxies.youtube.initialize(context, obj));
 		return result;
 	}
@@ -96,17 +90,17 @@ public class youtube
 	/**
 	 * Commit the changes made on this proxy object.
 	 */
-	public final void commit() throws CoreException
+	public final void commit() throws com.mendix.core.CoreException
 	{
-		Core.commit(context, getMendixObject());
+		com.mendix.core.Core.commit(context, getMendixObject());
 	}
 
 	/**
 	 * Commit the changes made on this proxy object using the specified context.
 	 */
-	public final void commit(IContext context) throws CoreException
+	public final void commit(com.mendix.systemwideinterfaces.core.IContext context) throws com.mendix.core.CoreException
 	{
-		Core.commit(context, getMendixObject());
+		com.mendix.core.Core.commit(context, getMendixObject());
 	}
 
 	/**
@@ -114,15 +108,15 @@ public class youtube
 	 */
 	public final void delete()
 	{
-		Core.delete(context, getMendixObject());
+		com.mendix.core.Core.delete(context, getMendixObject());
 	}
 
 	/**
 	 * Delete the object using the specified context.
 	 */
-	public final void delete(IContext context)
+	public final void delete(com.mendix.systemwideinterfaces.core.IContext context)
 	{
-		Core.delete(context, getMendixObject());
+		com.mendix.core.Core.delete(context, getMendixObject());
 	}
 	/**
 	 * @return value of url
@@ -136,7 +130,7 @@ public class youtube
 	 * @param context
 	 * @return value of url
 	 */
-	public final String geturl(IContext context)
+	public final String geturl(com.mendix.systemwideinterfaces.core.IContext context)
 	{
 		return (String) getMendixObject().getValue(context, MemberNames.url.toString());
 	}
@@ -155,7 +149,7 @@ public class youtube
 	 * @param context
 	 * @param url
 	 */
-	public final void seturl(IContext context, String url)
+	public final void seturl(com.mendix.systemwideinterfaces.core.IContext context, String url)
 	{
 		getMendixObject().setValue(context, MemberNames.url.toString(), url);
 	}
@@ -163,7 +157,7 @@ public class youtube
 	/**
 	 * @return the IMendixObject instance of this proxy for use in the Core interface.
 	 */
-	public final IMendixObject getMendixObject()
+	public final com.mendix.systemwideinterfaces.core.IMendixObject getMendixObject()
 	{
 		return youtubeMendixObject;
 	}
@@ -171,7 +165,7 @@ public class youtube
 	/**
 	 * @return the IContext instance of this proxy, or null if no IContext instance was specified at initialization.
 	 */
-	public final IContext getContext()
+	public final com.mendix.systemwideinterfaces.core.IContext getContext()
 	{
 		return context;
 	}
@@ -199,7 +193,7 @@ public class youtube
 	/**
 	 * @return String name of this class
 	 */
-	public static String getType()
+	public static java.lang.String getType()
 	{
 		return "TestSuite.youtube";
 	}
@@ -209,7 +203,7 @@ public class youtube
 	 * @deprecated Use getMendixObject().getId().toLong() to get a unique identifier for this object.
 	 */
 	@Deprecated
-	public String getGUID()
+	public java.lang.String getGUID()
 	{
 		return "ID_" + getMendixObject().getId().toLong();
 	}

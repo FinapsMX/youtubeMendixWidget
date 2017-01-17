@@ -30,27 +30,20 @@ define([
     "dojo/_base/lang",
     "dojo/text",
     "dojo/html",
+    "dojo/dom-attr",
     "dojo/_base/event",
-    "youtube/lib/jquery-1.11.2",
     "dojo/text!youtube/widget/template/youtube.html"
-], function (declare, _WidgetBase, _TemplatedMixin, dom, dojoDom, dojoProp, dojoGeometry, dojoClass, dojoStyle, dojoConstruct, dojoArray, dojoLang, dojoText, dojoHtml, dojoEvent, _jQuery, widgetTemplate) {
+], function (declare, _WidgetBase, _TemplatedMixin, dom, dojoDom, dojoProp, dojoGeometry, dojoClass, dojoStyle, dojoConstruct, dojoArray, dojoLang, dojoText, dojoHtml, dojoAttr, dojoEvent, widgetTemplate) {
     "use strict";
-
-    var $ = _jQuery.noConflict(true);
 
     // Declare widget's prototype.
     return declare("youtube.widget.youtube", [_WidgetBase, _TemplatedMixin], {
         // _TemplatedMixin will create our dom node using this HTML template.
         templateString: widgetTemplate,
+        youtubeplayer: null, 
 
         // Parameters configured in the Modeler.
         value: "", 
-
-
-        // dojo.declare.constructor is called to construct the widget instance. Implement to initialize non-primitive properties.
-        constructor: function () {
-            this._handles = [];
-        },
 
         // dijit._WidgetBase.postCreate is called after constructing the widget. Implement to do extra setup work.
         postCreate: function () {
@@ -61,22 +54,15 @@ define([
         // mxui.widget._WidgetBase.update is called when context is changed or initialized. Implement to re-render and / or fetch data.
         update: function (obj, callback) {
             console.log(this.id + ".update");
-            
             if(obj != null){
                 this._makePlayer(obj.get(this.value));
             }
-
 
             callback();
         },
         
         _makePlayer: function(url){
-            console.log("making player"); 
-            
-            var videoPlayer = dojo.cache('youtube.widget.template', 'youtube.html');
-            videoPlayer = videoPlayer.split("{{url}}").join(url); 
-            this.domNode.innerHTML = videoPlayer;   
-            
+            dojoAttr.set(this.youtubeplayer, "src", url);  
         },
 
         uninitialize: function () {

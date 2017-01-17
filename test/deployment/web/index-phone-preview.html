@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8" />
         <title>Mendix 5 - Phone preview</title>
-        <link href="css/phone-preview.css" rel="stylesheet">
+        <link href="css/phone-preview.css?636202671416511694" rel="stylesheet">
     </head>
     <body>
         <div class="content">
@@ -18,7 +18,7 @@
         <script type="text/javascript">
             // Firefox does not add a history item if the page is not loaded 
             // from the cache, and the src is set as attribute on the iframe
-            document.getElementById("frame").src = "index.html?profile=phone";
+            document.getElementById("frame").src = "index.html?profile=phone" + window.location.hash;
         </script>
     </body>
 </html>

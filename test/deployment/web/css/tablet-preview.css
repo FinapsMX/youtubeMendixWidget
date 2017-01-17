@@ -15,15 +15,15 @@ body {
     vertical-align: middle;
 }
 .wrapper {
-    width: 960px;
-    height: 620px;
+    width: 1024px;
+    height: 768px;
     margin: auto;
-    padding: 70px 56px 62px;
+    padding: 70px 130px;
     background: url(images/ipad.png) no-repeat center center;
 }
 .frame {
-    width: 960px;
-    height: 620px;
+    width: 100%;
+    height: 100%;
     border: none;
 }
 .disclaimer {
